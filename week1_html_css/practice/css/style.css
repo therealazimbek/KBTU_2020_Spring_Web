@@ -1,0 +1,108 @@
+h1 {
+    color: green;
+}
+
+em {
+    color: red;
+}
+
+li {
+    font-weight: bold;
+}
+
+li em {
+    font-size: 14px;
+}
+ a:hover {
+     color: green;
+ }
+
+ a:visited {
+     color: yellow;
+ }
+
+ .element {
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+
+	/* font: ??? */
+}
+
+ .flag {
+     position: relative;
+    width: 600px;
+    height: 400px;
+    /* background-color: black; */
+    border: 1px solid black
+}
+
+.circle {
+    top: 80px;
+    left: 180px;
+    position: absolute;
+    height:240px;
+    width: 240px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.list-group {
+    list-style: none;
+}
+
+.list-group li {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.list-group li:hover {
+    background-color: #0d6efd;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.list-group-item a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.card {
+    width: 350px;
+    border: 1px solid grey;
+}
+
+.card img {
+    width: 350px;
+}
+
+.card-body {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.card-title {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.card-body a {
+    color: white;
+    text-decoration: none;
+    background-color: #e45d80;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
