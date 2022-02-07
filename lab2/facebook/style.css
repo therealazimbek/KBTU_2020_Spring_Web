@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    height: 720px;
+    /* border: 3px solid black; */
+}
+
+/* Main */
+
+.main {
+    width: 100%;
+    height: 540px;
+    margin-top: 70px;
+    /* border: 3px solid red; */
+
+    position: relative;
+}
+
+/* Content */
+
+.content {
+    width: 80%;
+    height: 496px;
+    /* border: 3px solid green; */
+
+    display: flex;
+
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+
+/* Text */
+
+.text {
+    /* border: 3px solid aqua; */
+    width: 55%;
+}
+
+.logo {
+    width: 300px;
+    height: 100px;
+    margin-top: 80px;
+}
+
+.text-p {
+    margin-left: 40px;
+
+    font-size: 28px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Form */
+
+.form {
+    width: 45%;
+    display: inline-block;
+    /* border: 3px solid blue; */
+}
+
+form {
+    width: 400px;
+    height: 315px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 30px auto;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.form input {
+    width: 92%;
+    height: 50px;
+    margin: 13px 12px 0 15px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 10px;
+}
+
+input.login {
+    background-color: #1877f2;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+input.login:hover {
+    background-color: #185cf2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a.forget {
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+
+    margin-left: 150px;
+}
+
+hr {
+    border: 1px solid #dadde1;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+input.new-account {
+    margin-top: 10px;
+    margin-left: 78px;
+    width: 60%;
+    background-color: #42b72a;
+    color: white;
+    font-weight: bold;
+}
+
+input.new-account:hover {
+    background-color: #42a52a;
+    cursor: pointer;
+}
+
+p.form-text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+a.post-form-text {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+
+a.post-form-text:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+a.post-form-text:hover:after {
+    display: block;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    position: absolute;
+    top: 720px;
+    bottom: 0;
+    background-color: white;
+    /* border: 3px solid yellow; */
+}
+
+.langs,
+.links {
+    width: 85%;
+    max-width: 980px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+li {
+    display: inline;
+    list-style: none;
+    padding-right: 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: #998d9f;
+    font-size: 12px;
+}
+
+.line {
+    border: 0.5px solid #dadde1;
+    width: 70%;
+    max-width: 980px;
+    margin: 15px auto;
+}
+
+.links {
+    margin-top: 0px;
+}
+
+.links li {
+    padding-right: 20px;
+}
+
+.meta p {
+    color: #998d9f;
+    font-size: 11px;
+    margin-top: 20px;
+}
