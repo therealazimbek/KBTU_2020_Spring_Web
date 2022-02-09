@@ -25,19 +25,22 @@ body {
     margin-top: 70px;
     /* border: 3px solid red; */
 
-    position: relative;
+    /* position: relative; */
 }
 
 /* Content */
 
 .content {
     width: 80%;
+    max-width: 980px;
     height: 496px;
     /* border: 3px solid green; */
 
     display: flex;
+    margin: 0 auto;
+    margin-top: 16px;
 
-    position: absolute;
+    /* position: absolute; */
     top: 4%;
     left: 10%;
 }
@@ -224,12 +227,17 @@ li a {
     }
 
     .content {
-        display: inline-block;
+        display: inline;
+        margin: 0 auto;
     }
 
     .text, .form {
         display: block;
         width: 100%;
         text-align: center;
+    }
+
+    a.forget {
+        margin-left: 0;
     }
 }
