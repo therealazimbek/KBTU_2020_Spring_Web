@@ -215,3 +215,21 @@ li a {
     font-size: 11px;
     margin-top: 20px;
 }
+
+
+@media screen and (max-width: 900px) {
+
+    .main {
+        margin-top: 0;
+    }
+
+    .content {
+        display: inline-block;
+    }
+
+    .text, .form {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
