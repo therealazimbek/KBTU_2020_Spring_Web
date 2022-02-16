@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Flex layout*/
+
+@keyframes color {
+    0%   { background: #33CCCC; }
+    20%  { background: #33CC36; }
+    40%  { background: #B8CC33; }
+    60%  { background: #FCCA00; }
+    80%  { background: #33CC36; }
+    100% { background: #33CCCC; }
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+
+    font-family: 'Roboto Serif', sans-serif;
+
+    background: #33CCCC; /* Fallback */
+    animation: color 9s infinite linear;
+}
+.flex-item {
+    flex-basis: 50px;
+}
+
+.item-3 {
+    flex-grow: 1;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Logo */
+.logo {
+    margin: 10px 0;
+
+    color: white;
+    font-family: 'Satisfy', cursive;
+    font-size: 50px;
+}
+
+/* ToDoList */
+
+div.main-container {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.box {
+    border-radius: 10px;
+    padding: 20px 25px;
+}
+
+/* TodoList add */
+
+#new {
+    padding: 10px;
+    width: 70%;
+    border: 2px solid gray;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    border-radius: 8px;
+}
+
+#addNewTask {
+    height: 35px;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: #0d6efd;
+    /*box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;*/
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#addNewTask:active {
+    background-color: rgba(13, 110, 253, 0.5);
+}
+
+/* TodoList main */
+
+.todo-list {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+i {
+    float: right;
+}
+
+.check {
+    margin-right: 10px;
+}
+
+.date-block {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+/* Footer */
+p {
+    color: white;
+    font-family: 'Satisfy', cursive;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 450px){
+    #addNewTask {
+        display: block;
+        margin: 5px auto;
+    }
+}
+

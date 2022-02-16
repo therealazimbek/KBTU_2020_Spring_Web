@@ -5,11 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>To Do App</title>
+    <script src="https://kit.fontawesome.com/3ee52d1216.js" crossorigin="anonymous"></script>
+    <title>Simple ToDo</title>
 </head>
 <body>
-    
+    <div class="flex-container">
+        <header class="flex-item item-1"><h2 class="logo">Simple ToDo</h2></header>
+        <main class="flex-item item-3">
+            <div class="main-container">
+                <h1>ToDo List</h1>
+                <div class="new-task box">
+                    <input type="text" id="new" placeholder="New Task...">
+                    <button id="addNewTask">Add Task</button>
+                </div>
 
+                <div class="todo-list box">
+                    <ul>
+<!--                        <li>-->
+<!--                            <input type="checkbox" class="check">-->
+<!--                            <label>Task Name</label>-->
+<!--                            <i class="fa-solid fa-trash"></i>-->
+<!--                        </li>-->
+                    </ul>
+                </div>
+                <div class="date-block">
+                    <h3 class="date">Date</h3>
+                </div>
+            </div>
+        </main>
+        <footer class="flex-item item-5"><p>With love, Azimbek &hearts;</p></footer>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
