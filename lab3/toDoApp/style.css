@@ -115,6 +115,11 @@ i {
     float: right;
 }
 
+i:active {
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .check {
     margin-right: 10px;
 }
