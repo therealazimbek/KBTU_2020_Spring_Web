@@ -80,7 +80,7 @@ input {
 }
 
 ::placeholder {
-    color: #838996;
+    color: red;
 }
 
 input:focus {

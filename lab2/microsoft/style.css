@@ -143,7 +143,7 @@ a.third-a {
 }
 
 a.third-a:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Blocks */
@@ -157,9 +157,10 @@ a.third-a:hover {
     float: left;
     width: 25%;
     padding: 0;
+    margin-left: 5px;
   }
   
-.blocks {margin: 0 -5px;}
+/* .blocks {margin: 0 -5px;} */
   
 .blocks:after {
     content: "";
@@ -173,7 +174,7 @@ a.third-a:hover {
 }
 
 .card img {
-    width: 380px;
+    width: 320px;
 }
 
 h3 {
