@@ -50,7 +50,7 @@ export const newProducts = [
       'Since this Jolt-award winning classic was last updated in 2008, the Java programming environment has changed dramatically. Java 7 and Java 8 introduced new features and functions including, forEach() method in Iterable interface, default and static methods in Interfaces, Functional Interfaces and Lambda Expressions, Java Stream API for Bulk Data Operations on Collections, Java Time API, Collection API improvements, Concurrency API improvements, and Java IO improvements.',
     rating: 4.7,
     image:
-      'https://images-na.ssl-images-amazon.com/images/I/41zLisPNN2L._SX376_BO1,204,203,200_.jpg',
+      'https://www.pearsonhighered.com/assets/bigcovers/0/1/3/4/0134685997.jpg',
     link: 'https://www.amazon.com/Effective-Java-Joshua-Bloch/dp/0134685997/ref=sr_1_1?crid=2FTO1S7DH9JXR&keywords=java&qid=1646386932&sprefix=ja%2Caps%2C281&sr=8-1',
   },
   {
