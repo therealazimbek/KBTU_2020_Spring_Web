@@ -12,14 +12,40 @@ body {
   margin: 0;
 }
 
-.container {
+.container,
+app-product-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* flex-direction: row; */
+  /* background-color: red; */
+}
+
+app-product-list > div {
+  flex-basis: 40%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+app-product-list > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 router-outlet + * {
   padding: 0 16px;
 }
+
+@media screen and (max-width: 700px) {
+  app-product-list > div {
+    flex-basis: 100%;
+  }
+}
+
+/* App product list */
+/* app-product-list {
+  background-color: red;
+} */
 
 /* Text */
 

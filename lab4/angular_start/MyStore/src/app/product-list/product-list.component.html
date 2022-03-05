@@ -1,6 +1,8 @@
-<h2>Products</h2>
-
-<div *ngFor="let product of newProducts">
+<div class="text item">
+  <h1>Books</h1>
+</div>
+<div *ngFor="let product of newProducts" class="item">
+  <img src="{{ product.image }}" alt="img" class="item-img" />
   <h3>
     <a
       [title]="product.name + ' details'"

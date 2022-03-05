@@ -1,4 +1,16 @@
+.item {
+  text-align: center;
+}
 
+.item-img {
+  width: 200px;
+  height: 250px;
+}
+
+.text {
+  flex-basis: 100%;
+  box-shadow: none;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.

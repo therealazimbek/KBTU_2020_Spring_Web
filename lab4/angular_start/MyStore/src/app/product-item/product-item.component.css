@@ -1,0 +1,13 @@
+.product-item {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button {
+  z-index: 1;
+}
+/* 
+.product-item > img {
+  display: block;
+  margin: 10px auto;
+} */
