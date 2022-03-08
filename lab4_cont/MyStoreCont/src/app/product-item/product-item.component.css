@@ -1,0 +1,30 @@
+.product-item {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.heart {
+  color: red;
+  /* background-color: red; */
+  cursor: pointer;
+}
+
+.heart:active {
+  /* background-color: aqua; */
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.like {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.remove {
+  background: red;
+  margin-left: 10px;
+}
+
+/* .button {
+  z-index: 1;
+} */

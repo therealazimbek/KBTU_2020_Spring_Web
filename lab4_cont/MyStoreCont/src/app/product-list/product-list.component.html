@@ -1,0 +1,59 @@
+<nav class="navbar main-item">
+  <div class="categories">
+    <h3>Categories</h3>
+    <div
+      *ngFor="let category of categories"
+      class="category"
+      (click)="filterByCategory(category)"
+    >
+      <p>
+        {{ category.name }}
+      </p>
+    </div>
+    <button class="button" (click)="reset()">Reset</button>
+  </div>
+</nav>
+<main class="main main-item">
+  <div class="text item">
+    <h1>Books</h1>
+  </div>
+  <div *ngFor="let product of filteredProducts" class="item">
+    <div class="img">
+      <a
+        [title]="product.name + ' details'"
+        [routerLink]="['/products', product.id]"
+        ><img src="{{ product.image }}" alt="img" class="item-img"
+      /></a>
+    </div>
+    <div class="item-info">
+      <h3>
+        <a
+          [title]="product.name + ' details'"
+          [routerLink]="['/products', product.id]"
+        >
+          {{ product.name }}
+        </a>
+      </h3>
+      <!-- <p *ngIf="product.description">Description: {{ product.description }}</p> -->
+      <!-- <button type="button" (click)="share()">Share on WhatsApp</button> -->
+      <p>Rating: {{ product.rating }} out of 5</p>
+      <h4>Price: {{ product.price | currency }}</h4>
+      <a
+        class="button"
+        [title]="product.name + ' details'"
+        [routerLink]="['/products', product.id]"
+      >
+        More details
+      </a>
+    </div>
+
+    <!-- <app-product-alerts [product]="product" (notify)="onNotify()"> -->
+    <!-- </app-product-alerts> -->
+  </div>
+</main>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

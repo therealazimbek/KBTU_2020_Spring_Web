@@ -1,0 +1,33 @@
+<div *ngIf="product" class="product-item">
+  <h3>{{ product.name }}</h3>
+  <img src="{{ product.image }}" alt="Image" />
+  <h4>Price: {{ product.price | currency }}</h4>
+  <p>Description: {{ product.description }}</p>
+  <p>Rating: {{ product.rating }} out of 5</p>
+
+  <h3 class="like">
+    <fa-icon [icon]="faHeart" class="heart" (click)="increaseLikes()"></fa-icon>
+    {{ product.likes }}
+  </h3>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+  <!-- <button type="button" (click)="addToCart(product)">Buy</button> -->
+  <a href="{{ product.link }}" class="button" target="_blank">Buy on Amazon</a>
+  <!-- <button type="button" (click)="share()">Share on WhatsApp</button> -->
+  <a
+    href="https://wa.me/?text={{ product.name }}: {{ product.link }}"
+    class="button"
+    target="_blank"
+    >Share via WhatsApp</a
+  >
+  <a
+    href="https://t.me/share/url?url={{ product.link }}&text={{ product.name }}"
+    class="button"
+    target="_blank"
+    >Share via Telegram</a
+  >
+  <button class="remove" (click)="deleteProduct(product)" [routerLink]="['/']">
+    Remove Product
+  </button>
+  <!-- <img src="../../assets/img/whatsapp.png" alt="" class="ico" />
+    <img src="../../assets/img/whatsapp.png" alt="" class="ico" /> -->
+</div>
