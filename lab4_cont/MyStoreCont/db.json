@@ -9,7 +9,7 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/41tbeEEyfUL._SX404_BO1,204,203,200_.jpg",
       "link": "https://www.amazon.com/Learning-Angular-no-nonsense-applications-TypeScript/dp/1839210664/ref=sr_1_4?crid=32HDEF4G659U4&keywords=angular&qid=1646386084&sprefix=angular+%2Caps%2C273&sr=8-4",
       "category": "Frameworks",
-      "likes": 3
+      "likes": 10
     },
     {
       "id": 1111,
@@ -20,18 +20,7 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/41tbeEEyfUL._SX404_BO1,204,203,200_.jpg",
       "link": "https://www.amazon.com/Learning-Angular-no-nonsense-applications-TypeScript/dp/1839210664/ref=sr_1_4?crid=32HDEF4G659U4&keywords=angular&qid=1646386084&sprefix=angular+%2Caps%2C273&sr=8-4",
       "category": "Frameworks",
-      "likes": 4
-    },
-    {
-      "id": 11411,
-      "name": "1Learning Angular: A no-nonsense beginner's guide to building web applications with Angular 10 and TypeScript, 3rd Edition",
-      "price": 36.99,
-      "description": "Angular, loved by millions of web developers around the world, continues to be one of the top JavaScript frameworks thanks to its regular updates and new features that enable fast, cross-platform, and secure frontend web development. With Angular, you can achieve high performance using the latest web techniques and extensive integration with web tools and integrated development environments (IDEs).",
-      "rating": 4.1,
-      "image": "https://images-na.ssl-images-amazon.com/images/I/41tbeEEyfUL._SX404_BO1,204,203,200_.jpg",
-      "link": "https://www.amazon.com/Learning-Angular-no-nonsense-applications-TypeScript/dp/1839210664/ref=sr_1_4?crid=32HDEF4G659U4&keywords=angular&qid=1646386084&sprefix=angular+%2Caps%2C273&sr=8-4",
-      "category": "Frameworks",
-      "likes": 3
+      "likes": 5
     },
     {
       "id": 2,
@@ -42,7 +31,7 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/51HbNW6RzhL._SX375_BO1,204,203,200_.jpg",
       "link": "https://www.amazon.com/JavaScript-Definitive-Most-Used-Programming-Language/dp/1491952024/ref=sr_1_1?keywords=javascript&qid=1646386634&sprefix=javas%2Caps%2C329&sr=8-1",
       "category": "Programming Languages",
-      "likes": 6
+      "likes": 7
     },
     {
       "id": 3,
@@ -141,7 +130,7 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/51xkEqwHOxL._SX397_BO1,204,203,200_.jpg",
       "link": "https://www.amazon.com/Spring-Action-Craig-Walls/dp/1617294942/ref=sr_1_1?crid=JP8BKJVWRU74&keywords=spring+java&qid=1646740697&sprefix=spring+jav%2Caps%2C224&sr=8-1",
       "category": "Frameworks",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": 14,
@@ -251,7 +240,7 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/51DBEQehdBL._SX404_BO1,204,203,200_.jpg",
       "link": "https://www.amazon.com/Hands-Azure-Developers-ecosystems-containers/dp/1789340624/ref=sr_1_15?crid=JZVM488YVI2P&keywords=cloud+books&qid=1646741451&rnid=283155&s=books&sprefix=cloud+technology+books%2Cstripbooks-intl-ship%2C207&sr=1-15",
       "category": "Cloud",
-      "likes": 1
+      "likes": 2
     }
   ]
 }

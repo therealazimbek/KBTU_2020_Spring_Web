@@ -1,6 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { CartService } from '../services/cart.service';
 
 import { ProductItem, newProducts } from '../product-items';
@@ -15,10 +13,8 @@ import { ProductService } from '../services/product.service';
 export class ProductItemComponent implements OnInit {
   @Output() onRefreshPage: EventEmitter<any> = new EventEmitter();
   products: ProductItem[] = [];
-  currentProductId: number = -1;
   product: ProductItem | undefined;
-  faHeart = faHeart;
-  faTrash = faTrash;
+  productRatingWidth: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,20 +25,18 @@ export class ProductItemComponent implements OnInit {
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('productId'));
-    this.currentProductId = productIdFromRoute;
 
     this.productService
       .getProducts()
       .subscribe((products) => (this.products = products));
 
-    this.productService
-      .getProducts()
-      .subscribe(
-        (products) =>
-          (this.product = products.find(
-            (product) => product.id === productIdFromRoute
-          ))
+    this.productService.getProducts().subscribe((products) => {
+      this.product = products.find(
+        (product) => product.id === productIdFromRoute
       );
+      if (this.product)
+        this.productRatingWidth = (this.product?.rating / 5) * 100;
+    });
   }
 
   increaseLikes() {

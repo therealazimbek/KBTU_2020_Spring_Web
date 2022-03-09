@@ -3,12 +3,17 @@
   <img src="{{ product.image }}" alt="Image" />
   <h4>Price: {{ product.price | currency }}</h4>
   <p>Description: {{ product.description }}</p>
-  <p>Rating: {{ product.rating }} out of 5</p>
-
+  <!-- <p>Rating: {{ product.rating }} out of 5</p> -->
   <h3 class="like">
-    <fa-icon [icon]="faHeart" class="heart" (click)="increaseLikes()"></fa-icon>
+    <i class="fa fa-heart" (click)="increaseLikes()"></i>
     {{ product.likes }}
   </h3>
+  <div class="progress-bar">
+    <span class="progress-bar-fill" [style.width.%]="productRatingWidth"
+      >{{ product.rating }} out of 5</span
+    >
+  </div>
+  <br />
   <button type="button" (click)="addToCart(product)">Buy</button>
   <!-- <button type="button" (click)="addToCart(product)">Buy</button> -->
   <a href="{{ product.link }}" class="button" target="_blank">Buy on Amazon</a>
