@@ -54,6 +54,11 @@ main {
   top: 10px;
 }
 
+.active {
+  background-color: aqua;
+  transform: scale(1.08);
+}
+
 .category:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: scale(1.08);

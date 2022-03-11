@@ -4,6 +4,7 @@
     <div
       *ngFor="let category of categories"
       class="category"
+      [ngClass]="category.active ? 'active' : 'none'"
       (click)="filterByCategory(category)"
     >
       <p>

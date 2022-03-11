@@ -4,7 +4,7 @@
   <h4>Price: {{ product.price | currency }}</h4>
   <p>Description: {{ product.description }}</p>
   <p>Rating: {{ product.rating }} out of 5</p>
-
+  <a [routerLink]="['/']"> Go Back </a>
   <button type="button" (click)="addToCart(product)">Buy</button>
   <a href="{{ product.link }}" class="button" target="_blank">Buy on Amazon</a>
   <!-- <button type="button" (click)="share()">Share on WhatsApp</button> -->

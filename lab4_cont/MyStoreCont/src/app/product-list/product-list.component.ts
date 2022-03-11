@@ -28,9 +28,14 @@ export class ProductListComponent implements OnInit {
   }
 
   filterByCategory(filtered: Category) {
-    this.filteredProducts = this.products.filter((product: ProductItem) => {
-      return product.category.includes(filtered.name);
-    });
+    filtered.active = !filtered.active;
+    if (filtered.active) {
+      this.filteredProducts = this.products.filter((product: ProductItem) => {
+        return product.category.includes(filtered.name);
+      });
+    } else {
+      this.reset();
+    }
   }
 
   reset() {
