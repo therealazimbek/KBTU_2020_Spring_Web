@@ -1,0 +1,73 @@
+/* Background */
+
+.background {
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 800% 800%;
+
+  animation: Background 13s ease infinite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes Background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  text-align: center;
+}
+
+.main h1 {
+  color: white;
+  font-size: 80px;
+  font-family: "Indie Flower", cursive;
+}
+
+.btn-cont {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 0.5em 1.5em;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  background-color: #f39f86;
+  background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+  color: white;
+}
+
+.btn:active {
+  background: rgba(255, 255, 255, 0.6);
+}

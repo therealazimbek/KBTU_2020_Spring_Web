@@ -1,0 +1,52 @@
+.album-list {
+  width: 70%;
+  margin: 0 auto;
+  /* display: flex; */
+}
+
+.album-item {
+  /* border: 1px solid red; */
+  margin-bottom: 15px;
+  padding: 10px;
+  display: flex;
+  /* height: 40px; */
+}
+
+.album-item:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+.album-item a {
+  display: inline-block;
+  flex: 6;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.del-btn {
+  background-color: red;
+  flex: 1;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.del-btn:active {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 1000px) {
+  .album-item a {
+    flex: 8;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .album-list {
+    width: 95%;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="back">
+    <a [routerLink]="['/albums']" [title]="'Albums'"
+      ><img src="../../../assets/images/previous.png" alt=""
+    /></a>
+  </div>
+  <div *ngIf="album" class="album">
+    <h2>Album title: {{ album.title }}</h2>
+    <p>Album ID: {{ album.id }}</p>
+    <p>Album userID: {{ album.userId }}</p>
+    <p><a [routerLink]="['photos']">Album Photos</a></p>
+    <input type="text" [(ngModel)]="album.title" />
+    <button (click)="updateAlbum()" class="save">Save</button>
+  </div>
+</div>

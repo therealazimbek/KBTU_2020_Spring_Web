@@ -1,0 +1,46 @@
+section {
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  width: 64px;
+}
+
+.bg-4 {
+  background: linear-gradient(5deg, #556270, #c44d58);
+}
+
+.about-main {
+  display: flex;
+  text-align: center;
+}
+
+.about-main img {
+  vertical-align: middle;
+}
+
+.about-main h1 {
+  color: white;
+  font-family: "Indie Flower", cursive;
+  font-size: 48px;
+}
+
+.contact {
+  gap: 1;
+}
+
+.contact img {
+  width: 32px;
+}
+
+.contact a {
+  margin: 5px;
+}
