@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Album } from 'src/app/models/album';
 import { AlbumsService } from 'src/app/services/albums.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-album-detail',
@@ -12,7 +13,8 @@ export class AlbumDetailComponent implements OnInit {
   album: Album | undefined;
   constructor(
     private route: ActivatedRoute,
-    private albumsService: AlbumsService
+    private albumsService: AlbumsService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -25,6 +27,9 @@ export class AlbumDetailComponent implements OnInit {
 
     this.albumsService.getAlbums().subscribe((albums) => {
       this.album = albums.find((album) => album.id === albumIdFromRoute);
+      if (!this.album) {
+        this.router.navigate(['notfound']);
+      }
     });
   }
 
