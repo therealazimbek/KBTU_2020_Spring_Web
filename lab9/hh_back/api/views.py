@@ -1,24 +1,45 @@
-from django.shortcuts import render
-from django.http import JsonResponse
 
+import json
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import Company, Vacancy
 
 
 def home(request):
     return JsonResponse({'message': 'HI'})
 
-
+@csrf_exempt
 def companiesListPage(request):
-    companies = [company.to_json() for company in Company.objects.all()]
-    return JsonResponse(companies, safe=False)
+    if request.method == 'GET':
+        companies = [company.to_json() for company in Company.objects.all()]
+        return JsonResponse(companies, safe=False)
+
+    elif request.method == 'POST':
+        data = json.loads(request.body)
+        try:
+            company = Company.objects.create(name=data['name'], description=data['description'], city=data['city'], address=data['address'])
+        except Exception as e:
+            return JsonResponse({'message': str(e)})
+        return JsonResponse(company.to_json())
 
 
+@csrf_exempt
 def companyDetailPage(request, pk):
     try:
         company = Company.objects.get(id=pk)
     except Company.DoesNotExist as e:
         return JsonResponse({"message": str(e)}, status=400)
-    return JsonResponse(company.to_json()) 
+
+    if request.method == 'GET':
+        return JsonResponse(company.to_json()) 
+    elif request.method == 'PUT':
+        data = json.loads(request.body)
+        company.description = data['description']
+        company.save()
+        return JsonResponse(company.to_json())
+    elif request.method == 'DELETE':
+        company.delete()
+        return JsonResponse({'message': 'Selected company deleted!'})        
 
 
 def companyVacancies(request, pk):
