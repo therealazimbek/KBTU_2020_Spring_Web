@@ -1,0 +1,86 @@
+<div *ngIf="company" class="card" style="width: 18rem">
+  <div class="card-body">
+    <a [routerLink]="['/companies']" [title]="'companies'" class="card-link"
+      >Go back</a
+    >
+    <h5 class="card-title">{{ company.id }}: {{ company.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      {{ company.city }}, {{ company.address }}
+    </h6>
+    <p class="card-text">
+      {{ company.description }}
+    </p>
+    <div>
+      <button type="button" class="btn btn-primary" (click)="editable()">
+        Edit
+      </button>
+    </div>
+    <br />
+    <h6 class="card-subtitle mb-2">Vacancies:</h6>
+    <div class="list-group">
+      <a
+        *ngFor="let vacancy of vacancies"
+        [routerLink]="['/vacancies', vacancy.id]"
+        class="list-group-item list-group-item-action"
+      >
+        {{ vacancy.name }}
+      </a>
+      <p *ngIf="vacancies && vacancies.length === 0">No active vacancies</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="company && edit">
+  <div class="submit-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="company.name"
+        name="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input
+        class="form-control"
+        id="description"
+        required
+        [(ngModel)]="company.description"
+        name="description"
+      />
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input
+        class="form-control"
+        id="city"
+        required
+        [(ngModel)]="company.city"
+        name="city"
+      />
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input
+        class="form-control"
+        id="address"
+        required
+        [(ngModel)]="company.address"
+        name="address"
+      />
+    </div>
+    <button class="badge badge-danger mr-2" (click)="deleteCompany()">
+      Delete
+    </button>
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateCompany()"
+    >
+      Update
+    </button>
+  </div>
+</div>

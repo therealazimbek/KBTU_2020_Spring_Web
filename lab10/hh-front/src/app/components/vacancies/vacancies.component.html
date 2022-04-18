@@ -1,0 +1,16 @@
+<h1>Vacancies:</h1>
+<div>
+  <a routerLink="/addVacancy">Add Vacancy</a>
+</div>
+<div>
+  <a routerLink="/topVacancies">Top Vacancies</a>
+</div>
+<div class="list-group">
+  <a
+    *ngFor="let vacancy of vacancies"
+    [routerLink]="['/vacancies', vacancy.id]"
+    class="list-group-item list-group-item-action"
+  >
+    {{ vacancy.name }}
+  </a>
+</div>

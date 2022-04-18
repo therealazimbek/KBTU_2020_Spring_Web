@@ -1,0 +1,80 @@
+<div *ngIf="vacancy" class="card" style="width: 18rem">
+  <div class="card-body">
+    <a [routerLink]="['/vacancies']" [title]="'vacancies'" class="card-link"
+      >Go back</a
+    >
+    <h5 class="card-title">{{ vacancy.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ vacancy.salary }} KZT</h6>
+    <p class="card-text">{{ vacancy.description }}</p>
+
+    <p class="card-text">
+      Company:<a
+        [routerLink]="['/companies', vacancy.company.id]"
+        class="card-link"
+        >{{ vacancy.company.name }}</a
+      >
+    </p>
+    <div>
+      <button type="button" class="btn btn-primary" (click)="editable()">
+        Edit
+      </button>
+    </div>
+    <br />
+  </div>
+</div>
+
+<div *ngIf="vacancy_add && edit">
+  <div class="submit-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="vacancy_add.name"
+        name="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input
+        class="form-control"
+        id="description"
+        required
+        [(ngModel)]="vacancy_add.description"
+        name="description"
+      />
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input
+        class="form-control"
+        id="salary"
+        required
+        [(ngModel)]="vacancy_add.salary"
+        name="salary"
+      />
+    </div>
+    <div class="form-group">
+      <label for="company_id">Company ID:</label>
+      <input
+        class="form-control"
+        id="company_id"
+        required
+        [(ngModel)]="vacancy_add.company_id"
+        name="company_id"
+      />
+    </div>
+    <button class="badge badge-danger mr-2" (click)="deleteVacancy()">
+      Delete
+    </button>
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateVacancy()"
+    >
+      Update
+    </button>
+  </div>
+</div>

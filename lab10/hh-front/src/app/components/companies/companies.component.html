@@ -1,0 +1,13 @@
+<h1>Companies</h1>
+<div>
+  <a routerLink="/addCompany">Add Company</a>
+</div>
+
+<div class="list-group">
+  <a
+    *ngFor="let company of companies"
+    [routerLink]="['/companies', company.id]"
+    class="list-group-item list-group-item-action"
+    >{{ company.name }}</a
+  >
+</div>

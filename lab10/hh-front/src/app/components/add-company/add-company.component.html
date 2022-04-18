@@ -1,0 +1,46 @@
+<div>
+  <div class="submit-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="company.name"
+        name="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input
+        class="form-control"
+        id="description"
+        required
+        [(ngModel)]="company.description"
+        name="description"
+      />
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input
+        class="form-control"
+        id="city"
+        required
+        [(ngModel)]="company.city"
+        name="city"
+      />
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input
+        class="form-control"
+        id="address"
+        required
+        [(ngModel)]="company.address"
+        name="address"
+      />
+    </div>
+    <button (click)="saveCompany()" class="btn btn-success">Submit</button>
+  </div>
+</div>

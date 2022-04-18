@@ -1,0 +1,46 @@
+<div>
+  <div class="submit-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="vacancy.name"
+        name="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input
+        class="form-control"
+        id="description"
+        required
+        [(ngModel)]="vacancy.description"
+        name="description"
+      />
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input
+        class="form-control"
+        id="salary"
+        required
+        [(ngModel)]="vacancy.salary"
+        name="salary"
+      />
+    </div>
+    <div class="form-group">
+      <label for="company_id">Company ID:</label>
+      <input
+        class="form-control"
+        id="company_id"
+        required
+        [(ngModel)]="vacancy.company_id"
+        name="company_id"
+      />
+    </div>
+    <button (click)="saveVacancy()" class="btn btn-success">Submit</button>
+  </div>
+</div>
