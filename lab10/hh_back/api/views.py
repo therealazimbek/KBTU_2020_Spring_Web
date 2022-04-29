@@ -1,7 +1,7 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from rest_framework import generics, mixins
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Company, Vacancy
 from .serializers import CompanySerializer, VacancySerializer
@@ -32,6 +32,7 @@ class VacancyDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
 
 
 @api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated])
 def company_list(request):
     if request.method == 'GET':
         companies = Company.objects.all()
@@ -46,11 +47,12 @@ def company_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
 def company_detail(request, pk):
     try:
         company = Company.objects.get(id=pk)
     except Company.DoesNotExist as e:
-        return Response({'message': str(e)}, status=400)
+        return Response({'message': str(e)}, status=404)
 
     if request.method == 'GET':
         serializer = CompanySerializer(company)
@@ -67,6 +69,7 @@ def company_detail(request, pk):
 
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def company_vacancies(request, pk):
     try:
         company = Company.objects.get(id=pk)
@@ -78,6 +81,7 @@ def company_vacancies(request, pk):
 
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def vacanciesTopTen(request):
     vacancies = Vacancy.objects.all().order_by('-salary')
     serializer = VacancySerializer(vacancies, many=True)

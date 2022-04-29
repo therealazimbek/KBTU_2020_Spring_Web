@@ -12,7 +12,7 @@ const helper = new JwtHelperService();
   providedIn: 'root',
 })
 export class LabService {
-  BASE_URl = 'http://localhost:8000';
+  BASE_URl = 'http://127.0.0.1:8000';
 
   private messageSource = new BehaviorSubject('hi');
   currentMessage = this.messageSource.asObservable();

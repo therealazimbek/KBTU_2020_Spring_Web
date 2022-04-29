@@ -21,7 +21,9 @@ export class AuthGuardService {
       return true;
     } else {
       localStorage.removeItem('token');
-      location.reload();
+      alert('you must log in to view this page');
+
+      // location.reload();
     }
 
     this.router.navigate(['/login']);
